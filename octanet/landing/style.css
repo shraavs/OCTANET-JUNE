@@ -1,0 +1,210 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+#main {
+    width: 100%;
+    min-height: 100vh;
+}
+
+.top {
+    width: 100%;
+    min-height: 60vh;
+    background-image: url(https://st2.depositphotos.com/1591133/8812/i/450/depositphotos_88120646-stock-photo-idyllic-summer-landscape-with-clear.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative; /* Ensure relative positioning for absolute children */
+}
+
+.overlay {
+    position: absolute; /* Correctly position overlay */
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 60vh;
+    background-color: rgba(0, 0, 0, 0.295);
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    padding: 0 5vh;
+    color: white;
+    bottom: 5%;
+}
+
+.text h1 {
+    font-weight: 600;
+    font-size: 8vw; /* Responsive font size */
+    margin-bottom: 20px;
+}
+
+.images {
+    background-image: url(https://i0.wp.com/picjumbo.com/wp-content/uploads/beautiful-nature-mountain-scenery-path-with-flowers-free-photo.jpeg?w=600&quality=80);
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    width: 150px;
+}
+
+.rtext {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.rtext p {
+    margin: 5px 0;
+}
+
+.icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.bottom {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 40vh;
+}
+
+.b1, .b2, .b3 {
+    width: 100%;
+    min-height: 20vh;
+    margin-bottom: 20px;
+}
+
+.b1 {
+    background-image: url(https://cdn.pixabay.com/photo/2020/08/29/18/50/coastal-5527726_1280.jpg);
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.b1 h1 {
+    text-align: center;
+    padding: 10px 0;
+}
+
+.b1 p {
+    text-align: center;
+    padding: 10px;
+}
+
+.b2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.b2 .up, .b2 .down {
+    min-height: 20vh;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.b2 .up {
+    background-image: url(https://fileinfo.com/img/ss/xl/jpg_44-2.jpg);
+}
+
+.b2 .up h1 {
+    padding: 10px 0;
+}
+
+.b2 .up p {
+    padding: 10px;
+}
+
+.b2 .down {
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxjZJ-wrIfDv55NgbV5VQ72D7S2sOZJTpvEQ&s);
+    position: relative;
+}
+
+.b2 .down .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Darken overlay */
+}
+
+.b2 .down .overlay h1 {
+    margin: 0;
+}
+
+.b3 {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.b3 .overlay {
+    width: 100%;
+    text-align: center;
+}
+
+.b3 p {
+    padding: 10px 0;
+}
+
+@media (min-width: 768px) {
+    .text {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 10vh;
+    }
+
+    .images {
+        height: 300px;
+        width: 220px;
+    }
+
+    .bottom {
+        flex-direction: row;
+    }
+
+    .b1, .b2, .b3 {
+        width: 30%;
+        min-height: inherit;
+        margin-bottom: 0;
+    }
+
+    .b2 {
+        width: 40%;
+    }
+}
